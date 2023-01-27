@@ -4,8 +4,8 @@ import '../../../global/bin/data/view_type.dart';
 import '../../../global/bin/themes/our_colors.dart';
 import '../../../global/bin/widgets/text/text_view.dart';
 
-class ListViewBuilderView extends StatelessWidget {
-  const ListViewBuilderView({super.key});
+class GridViewBuilderView extends StatelessWidget {
+  const GridViewBuilderView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,15 @@ class ListViewBuilderView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const TextView('ListView (builder)', type: TypographyType.titleSmall),
+          const TextView('GridView (builder)', type: TypographyType.titleSmall),
           Expanded(
-            child: ListView.builder(
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 80,
+                mainAxisSpacing: 4,
+                crossAxisSpacing: 4,
+                childAspectRatio: 1,
+              ),
               itemCount: data.length,
               itemBuilder: (context, index) => Container(
                 height: 60,
