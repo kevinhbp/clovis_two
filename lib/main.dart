@@ -9,6 +9,9 @@ import 'modules/landing/landing_page_binding.dart';
 import 'modules/list_view_examples/list_view_example.dart';
 import 'modules/paginated_load_examples/paginated_load_page.dart';
 import 'modules/paginated_load_examples/paginated_load_page_binding.dart';
+import 'modules/states_examples/getx_states_example_page.dart';
+import 'modules/states_examples/getx_states_example_page_binding.dart';
+import 'modules/states_examples/states_example_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +37,8 @@ mixin Routes {
   static const String listViewPage = '/list-view';
   static const String gridViewPage = '/grid-view';
   static const String pagedListViewPage = '/paged-list-view';
+  static const String stateExamplePage = '/state-example';
+  static const String getxStateExamplePage = '/getx-state-example';
 
   static List<GetPage<dynamic>> routes = [
     GetPage(
@@ -59,6 +64,19 @@ mixin Routes {
       name: pagedListViewPage,
       page: PaginatedLoadPage.new,
       binding: PaginatedLoadPageBinding(),
+      transition: Transition.circularReveal,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: stateExamplePage,
+      page: StatesExamplePage.new,
+      transition: Transition.circularReveal,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: getxStateExamplePage,
+      page: GetxStatesExamplePage.new,
+      binding: GetxStatesExamplePageBinding(),
       transition: Transition.circularReveal,
       transitionDuration: const Duration(milliseconds: 400),
     ),

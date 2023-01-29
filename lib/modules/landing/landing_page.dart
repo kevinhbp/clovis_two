@@ -55,6 +55,30 @@ class LandingPage extends StatelessWidget {
                       Get.toNamed(Routes.pagedListViewPage);
                     },
                   ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  child: ButtonView(
+                    type: ButtonType.secondary,
+                    width: ButtonWidth.infinity,
+                    state: ButtonState.active,
+                    label: 'State example',
+                    onPressed: () {
+                      Get.toNamed(Routes.stateExamplePage);
+                    },
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  child: ButtonView(
+                    type: ButtonType.secondary,
+                    width: ButtonWidth.infinity,
+                    state: ButtonState.active,
+                    label: 'Getx State example',
+                    onPressed: () {
+                      Get.toNamed(Routes.getxStateExamplePage);
+                    },
+                  ),
                 )
               ],
             ),
