@@ -35,7 +35,11 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  padding: EdgeInsets.only(
+                    left: SpacingType.x4.value,
+                    right: SpacingType.x4.value,
+                    bottom: SpacingType.x4.value,
+                  ),
                   child: ButtonView(
                     width: ButtonWidth.infinity,
                     state: ButtonState.active,
@@ -46,7 +50,11 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  padding: EdgeInsets.only(
+                    left: SpacingType.x4.value,
+                    right: SpacingType.x4.value,
+                    bottom: SpacingType.x4.value,
+                  ),
                   child: ButtonView(
                     width: ButtonWidth.infinity,
                     state: ButtonState.active,
@@ -57,7 +65,11 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  padding: EdgeInsets.only(
+                    left: SpacingType.x4.value,
+                    right: SpacingType.x4.value,
+                    bottom: SpacingType.x4.value,
+                  ),
                   child: ButtonView(
                     type: ButtonType.secondary,
                     width: ButtonWidth.infinity,
@@ -69,7 +81,11 @@ class LandingPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  padding: EdgeInsets.only(
+                    left: SpacingType.x4.value,
+                    right: SpacingType.x4.value,
+                    bottom: SpacingType.x4.value,
+                  ),
                   child: ButtonView(
                     type: ButtonType.secondary,
                     width: ButtonWidth.infinity,
@@ -77,6 +93,21 @@ class LandingPage extends StatelessWidget {
                     label: 'Getx State example',
                     onPressed: () {
                       Get.toNamed(Routes.getxStateExamplePage);
+                    },
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(
+                    left: SpacingType.x4.value,
+                    right: SpacingType.x4.value,
+                    bottom: SpacingType.x4.value,
+                  ),
+                  child: ButtonView(
+                    width: ButtonWidth.infinity,
+                    state: ButtonState.active,
+                    label: 'Login Example',
+                    onPressed: () {
+                      Get.toNamed(Routes.loginPage);
                     },
                   ),
                 )
