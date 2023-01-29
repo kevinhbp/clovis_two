@@ -7,6 +7,8 @@ import 'modules/grid_view_examples/grid_view_example.dart';
 import 'modules/landing/landing_page.dart';
 import 'modules/landing/landing_page_binding.dart';
 import 'modules/list_view_examples/list_view_example.dart';
+import 'modules/paginated_load_examples/paginated_load_page.dart';
+import 'modules/paginated_load_examples/paginated_load_page_binding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +33,7 @@ mixin Routes {
   static const String landingPage = '/';
   static const String listViewPage = '/list-view';
   static const String gridViewPage = '/grid-view';
+  static const String pagedListViewPage = '/paged-list-view';
 
   static List<GetPage<dynamic>> routes = [
     GetPage(
@@ -49,6 +52,13 @@ mixin Routes {
     GetPage(
       name: gridViewPage,
       page: GridViewExample.new,
+      transition: Transition.circularReveal,
+      transitionDuration: const Duration(milliseconds: 400),
+    ),
+    GetPage(
+      name: pagedListViewPage,
+      page: PaginatedLoadPage.new,
+      binding: PaginatedLoadPageBinding(),
       transition: Transition.circularReveal,
       transitionDuration: const Duration(milliseconds: 400),
     ),

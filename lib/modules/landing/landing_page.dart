@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 import '../../global/bin/data/view_type.dart';
 import '../../global/bin/widgets/button/button_view.dart';
@@ -43,6 +42,17 @@ class LandingPage extends StatelessWidget {
                     label: 'Grid View example',
                     onPressed: () {
                       Get.toNamed(Routes.gridViewPage);
+                    },
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(SpacingType.x4.value),
+                  child: ButtonView(
+                    width: ButtonWidth.infinity,
+                    state: ButtonState.active,
+                    label: 'Paged List View example',
+                    onPressed: () {
+                      Get.toNamed(Routes.pagedListViewPage);
                     },
                   ),
                 )
