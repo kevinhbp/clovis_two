@@ -7,6 +7,7 @@ environment:
   sdk: '>=2.18.4 <3.0.0'
 
 dependencies:
+  alice: ^0.3.2
   adaptive_layout: ^0.1.7
   awesome_dialog: ^2.2.1
   blur: ^3.1.0
@@ -18,7 +19,7 @@ dependencies:
   easy_sidemenu: ^0.3.1
   flutter_dropzone: ^3.0.5
   flutter_jailbreak_detection: ^1.8.0
-  flutter_local_notifications: ^9.7.0
+  flutter_local_notifications: ^12.0.3
   flutter_native_splash: ^2.2.6
   flutter_secure_screen: ^0.0.1
   flutter_svg: ^1.1.1+1
@@ -32,7 +33,7 @@ dependencies:
   lottie: ^1.4.1
   path_provider: ^2.0.11
   percent_indicator: ^4.2.2
-  permission_handler: '>=8.2.6 <10.0.0'
+  permission_handler: '>=8.2.6 <11.0.0'
   retrofit: '>=3.0.0 <4.0.0'
   shimmer: ^2.0.0
   mask_text_input_formatter: ^2.3.0
