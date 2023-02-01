@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../bin/themes/our_colors.dart';
 import '../bin/themes/our_text_style.dart';
@@ -62,19 +63,87 @@ class AppColor {
 
 
 mixin AppTheme {
-  static const mTextTheme = TextTheme(
-    displayLarge: OurTextTheme.displayLarge,
-    displayMedium: OurTextTheme.displayModerate,
-    displaySmall: OurTextTheme.displaySmall,
-    headlineLarge: OurTextTheme.headlineLarge,
-    headlineMedium: OurTextTheme.headlineModerate,
-    headlineSmall: OurTextTheme.headlineSmall,
-    titleLarge: OurTextTheme.titleLarge,
-    titleMedium: OurTextTheme.titleModerate,
-    titleSmall: OurTextTheme.titleSmall,
-    labelLarge: OurTextTheme.labelLarge,
-    labelMedium: OurTextTheme.labelModerate,
-    labelSmall: OurTextTheme.labelSmall,
+  static const SystemUiOverlayStyle defaultOverlay = SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark);
+
+  static final mTextThemeLight = TextTheme(
+    displayLarge: OurTextTheme.displayLarge.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    displayMedium: OurTextTheme.displayModerate.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    displaySmall: OurTextTheme.displaySmall.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    headlineLarge: OurTextTheme.headlineLarge.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    headlineMedium: OurTextTheme.headlineModerate.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    headlineSmall: OurTextTheme.headlineSmall.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    titleLarge: OurTextTheme.titleLarge.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    titleMedium: OurTextTheme.titleModerate.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    titleSmall: OurTextTheme.titleSmall.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    labelLarge: OurTextTheme.labelLarge.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    labelMedium: OurTextTheme.labelModerate.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+    labelSmall: OurTextTheme.labelSmall.copyWith(
+      color: ComponentColors.text.textBlack2
+    ),
+  );
+
+  static final mTextThemeDark = TextTheme(
+    displayLarge: OurTextTheme.displayLarge.copyWith(
+      color: ComponentColors.text.textWhite1
+    ),
+    displayMedium: OurTextTheme.displayModerate.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    displaySmall: OurTextTheme.displaySmall.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    headlineLarge: OurTextTheme.headlineLarge.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    headlineMedium: OurTextTheme.headlineModerate.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    headlineSmall: OurTextTheme.headlineSmall.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    titleLarge: OurTextTheme.titleLarge.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    titleMedium: OurTextTheme.titleModerate.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    titleSmall: OurTextTheme.titleSmall.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    labelLarge: OurTextTheme.labelLarge.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    labelMedium: OurTextTheme.labelModerate.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
+    labelSmall: OurTextTheme.labelSmall.copyWith(
+        color: ComponentColors.text.textWhite1
+    ),
   );
 
   static final light = ThemeData(
@@ -85,8 +154,7 @@ mixin AppTheme {
     brightness: AppColor.lightScheme.brightness,
     primaryColor: AppColor.lightScheme.primary,
     backgroundColor: AppColor.lightScheme.background,
-    scaffoldBackgroundColor: AppColor.lightScheme.background,
-    textTheme: mTextTheme,
+    textTheme: mTextThemeLight,
   );
 
   static final dark = ThemeData(
@@ -97,6 +165,6 @@ mixin AppTheme {
     brightness: AppColor.darkScheme.brightness,
     primaryColor: AppColor.darkScheme.primary,
     backgroundColor: AppColor.darkScheme.background,
-    textTheme: mTextTheme,
+    textTheme: mTextThemeDark,
   );
 }

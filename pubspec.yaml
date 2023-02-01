@@ -92,6 +92,8 @@ flutter:
     - assets/images/
     - assets/images/global/
     - assets/images/illustration/
+    - assets/images/pokemon-types/
+    - assets/images/background/
   fonts:
     - family: Maison Neue
       fonts:
@@ -107,3 +109,13 @@ flutter:
           weight: 600
         - asset: assets/fonts/hauora_bold.ttf
           weight: 700
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/rubik_book.ttf
+        - asset: assets/fonts/rubik_demi.ttf
+          weight: 600
+        - asset: assets/fonts/rubik_bold.ttf
+          weight: 700
+    - family: Vt Mono
+      fonts:
+        - asset: assets/fonts/vtmono_book.ttf

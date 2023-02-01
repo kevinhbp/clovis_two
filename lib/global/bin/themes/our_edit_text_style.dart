@@ -34,43 +34,44 @@ mixin OurEditTextTheme {
     fillColor: ComponentColors.background.searchBox,
     border: OutlineInputBorder(
       borderRadius: RadiusType.circle.getBorderRadius(),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         width: 1.6,
-        color: ComponentColors.background.searchBoxOutline,
+        color: Colors.transparent,
       ),
     ),
     enabledBorder: OutlineInputBorder(
       borderRadius: RadiusType.circle.getBorderRadius(),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         width: 1.6,
-        color: ComponentColors.background.searchBoxOutline,
+        color: Colors.transparent,
       ),
     ),
     focusedBorder: OutlineInputBorder(
       borderRadius: RadiusType.circle.getBorderRadius(),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         width: 1.6,
-        color: ComponentColors.background.searchBoxOutlineFocused,
+        color: Colors.transparent,
       ),
     ),
     disabledBorder: OutlineInputBorder(
       borderRadius: RadiusType.circle.getBorderRadius(),
-      borderSide: BorderSide(
-        color: ComponentColors.background.searchBox,
+      borderSide: const BorderSide(
+        width: 1.6,
+        color: Colors.transparent,
       ),
     ),
     errorBorder: OutlineInputBorder(
       borderRadius: RadiusType.circle.getBorderRadius(),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         width: 1.6,
-        color: ComponentColors.background.searchBoxOutline,
+        color: Colors.transparent,
       ),
     ),
     focusedErrorBorder: OutlineInputBorder(
       borderRadius: RadiusType.circle.getBorderRadius(),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         width: 1.6,
-        color: ComponentColors.background.searchBoxOutline,
+        color: Colors.transparent,
       ),
     ),
     floatingLabelBehavior: FloatingLabelBehavior.never,

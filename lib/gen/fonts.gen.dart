@@ -15,4 +15,10 @@ class FontFamily {
 
   /// Font family: Maison Neue
   static const String maisonNeue = 'Maison Neue';
+
+  /// Font family: Rubik
+  static const String rubik = 'Rubik';
+
+  /// Font family: Vt Mono
+  static const String vtMono = 'Vt Mono';
 }

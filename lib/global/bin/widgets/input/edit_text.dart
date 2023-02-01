@@ -295,6 +295,7 @@ class EditText extends StatelessWidget {
             suffixIcon: controller.suffixWidget(endIcon),
           )
               : OurEditTextTheme.ourSearchInputDecoration.copyWith(
+            fillColor: Theme.of(context).cardColor,
             labelText: label,
             hintText: hint,
             prefixIcon: controller.searchPrefixWidget(startIcon),

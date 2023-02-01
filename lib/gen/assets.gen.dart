@@ -32,6 +32,18 @@ class $AssetsFontsGen {
   /// File path: assets/fonts/maisonneue_ext_demi.ttf
   String get maisonneueExtDemi => 'assets/fonts/maisonneue_ext_demi.ttf';
 
+  /// File path: assets/fonts/rubik_bold.ttf
+  String get rubikBold => 'assets/fonts/rubik_bold.ttf';
+
+  /// File path: assets/fonts/rubik_book.ttf
+  String get rubikBook => 'assets/fonts/rubik_book.ttf';
+
+  /// File path: assets/fonts/rubik_demi.ttf
+  String get rubikDemi => 'assets/fonts/rubik_demi.ttf';
+
+  /// File path: assets/fonts/vtmono_book.ttf
+  String get vtmonoBook => 'assets/fonts/vtmono_book.ttf';
+
   /// List of all assets
   List<String> get values => [
         hauoraBold,
@@ -39,16 +51,24 @@ class $AssetsFontsGen {
         hauoraDemi,
         maisonneueExtBold,
         maisonneueExtBook,
-        maisonneueExtDemi
+        maisonneueExtDemi,
+        rubikBold,
+        rubikBook,
+        rubikDemi,
+        vtmonoBook
       ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesBackgroundGen get background =>
+      const $AssetsImagesBackgroundGen();
   $AssetsImagesGlobalGen get global => const $AssetsImagesGlobalGen();
   $AssetsImagesIllustrationGen get illustration =>
       const $AssetsImagesIllustrationGen();
+  $AssetsImagesPokemonTypesGen get pokemonTypes =>
+      const $AssetsImagesPokemonTypesGen();
 }
 
 class $AssetsLoaderGen {
@@ -65,6 +85,25 @@ class $AssetsLoaderGen {
 
   /// List of all assets
   List<String> get values => [loading1, loading2, loading3];
+}
+
+class $AssetsImagesBackgroundGen {
+  const $AssetsImagesBackgroundGen();
+
+  /// File path: assets/images/background/bg_details.jpg
+  AssetGenImage get bgDetails =>
+      const AssetGenImage('assets/images/background/bg_details.jpg');
+
+  /// File path: assets/images/background/bg_home.jpg
+  AssetGenImage get bgHome =>
+      const AssetGenImage('assets/images/background/bg_home.jpg');
+
+  /// File path: assets/images/background/bg_on_error.jpg
+  AssetGenImage get bgOnError =>
+      const AssetGenImage('assets/images/background/bg_on_error.jpg');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [bgDetails, bgHome, bgOnError];
 }
 
 class $AssetsImagesGlobalGen {
@@ -285,6 +324,104 @@ class $AssetsImagesIllustrationGen {
         illustrationNotificationAllread,
         illustrationNotificationUnread,
         illustrationOtherAlt
+      ];
+}
+
+class $AssetsImagesPokemonTypesGen {
+  const $AssetsImagesPokemonTypesGen();
+
+  /// File path: assets/images/pokemon-types/bug.svg
+  SvgGenImage get bug =>
+      const SvgGenImage('assets/images/pokemon-types/bug.svg');
+
+  /// File path: assets/images/pokemon-types/dark.svg
+  SvgGenImage get dark =>
+      const SvgGenImage('assets/images/pokemon-types/dark.svg');
+
+  /// File path: assets/images/pokemon-types/dragon.svg
+  SvgGenImage get dragon =>
+      const SvgGenImage('assets/images/pokemon-types/dragon.svg');
+
+  /// File path: assets/images/pokemon-types/electric.svg
+  SvgGenImage get electric =>
+      const SvgGenImage('assets/images/pokemon-types/electric.svg');
+
+  /// File path: assets/images/pokemon-types/fairy.svg
+  SvgGenImage get fairy =>
+      const SvgGenImage('assets/images/pokemon-types/fairy.svg');
+
+  /// File path: assets/images/pokemon-types/fighting.svg
+  SvgGenImage get fighting =>
+      const SvgGenImage('assets/images/pokemon-types/fighting.svg');
+
+  /// File path: assets/images/pokemon-types/fire.svg
+  SvgGenImage get fire =>
+      const SvgGenImage('assets/images/pokemon-types/fire.svg');
+
+  /// File path: assets/images/pokemon-types/flying.svg
+  SvgGenImage get flying =>
+      const SvgGenImage('assets/images/pokemon-types/flying.svg');
+
+  /// File path: assets/images/pokemon-types/ghost.svg
+  SvgGenImage get ghost =>
+      const SvgGenImage('assets/images/pokemon-types/ghost.svg');
+
+  /// File path: assets/images/pokemon-types/grass.svg
+  SvgGenImage get grass =>
+      const SvgGenImage('assets/images/pokemon-types/grass.svg');
+
+  /// File path: assets/images/pokemon-types/ground.svg
+  SvgGenImage get ground =>
+      const SvgGenImage('assets/images/pokemon-types/ground.svg');
+
+  /// File path: assets/images/pokemon-types/ice.svg
+  SvgGenImage get ice =>
+      const SvgGenImage('assets/images/pokemon-types/ice.svg');
+
+  /// File path: assets/images/pokemon-types/normal.svg
+  SvgGenImage get normal =>
+      const SvgGenImage('assets/images/pokemon-types/normal.svg');
+
+  /// File path: assets/images/pokemon-types/poison.svg
+  SvgGenImage get poison =>
+      const SvgGenImage('assets/images/pokemon-types/poison.svg');
+
+  /// File path: assets/images/pokemon-types/psychic.svg
+  SvgGenImage get psychic =>
+      const SvgGenImage('assets/images/pokemon-types/psychic.svg');
+
+  /// File path: assets/images/pokemon-types/rock.svg
+  SvgGenImage get rock =>
+      const SvgGenImage('assets/images/pokemon-types/rock.svg');
+
+  /// File path: assets/images/pokemon-types/steel.svg
+  SvgGenImage get steel =>
+      const SvgGenImage('assets/images/pokemon-types/steel.svg');
+
+  /// File path: assets/images/pokemon-types/water.svg
+  SvgGenImage get water =>
+      const SvgGenImage('assets/images/pokemon-types/water.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+        bug,
+        dark,
+        dragon,
+        electric,
+        fairy,
+        fighting,
+        fire,
+        flying,
+        ghost,
+        grass,
+        ground,
+        ice,
+        normal,
+        poison,
+        psychic,
+        rock,
+        steel,
+        water
       ];
 }
 

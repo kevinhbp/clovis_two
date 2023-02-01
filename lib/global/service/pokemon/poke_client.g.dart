@@ -23,7 +23,7 @@ class _PokeClient implements PokeClient {
   @override
   Future<PokemonList> getPokemonList({
     offset = 0,
-    limit = 8,
+    limit = 20,
   }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{

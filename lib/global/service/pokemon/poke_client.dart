@@ -13,7 +13,7 @@ abstract class PokeClient {
   @GET('pokemon')
   Future<PokemonList> getPokemonList({
     @Query('offset') int offset = 0,
-    @Query('limit') int limit = 8,
+    @Query('limit') int limit = 20,
   });
 
   @GET('pokemon/{id}')
