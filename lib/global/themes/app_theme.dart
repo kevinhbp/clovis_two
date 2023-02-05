@@ -147,7 +147,7 @@ mixin AppTheme {
   );
 
   static final light = ThemeData(
-    fontFamily: 'Hauora',
+    fontFamily: 'Rubik',
     visualDensity: VisualDensity.adaptivePlatformDensity,
     useMaterial3: false,
     colorScheme: AppColor.lightScheme,
@@ -158,7 +158,7 @@ mixin AppTheme {
   );
 
   static final dark = ThemeData(
-    fontFamily: 'Hauora',
+    fontFamily: 'Rubik',
     visualDensity: VisualDensity.adaptivePlatformDensity,
     useMaterial3: false,
     colorScheme: AppColor.darkScheme,

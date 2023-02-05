@@ -28,10 +28,9 @@ class MainPageHeader extends StatelessWidget {
           color: ComponentColors.text.textWhite1,
         ),
         systemOverlayStyle: AppTheme.defaultOverlay,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-            bottomRight: RadiusType.subLarge.getRadius(),
-            bottomLeft: RadiusType.subLarge.getRadius(),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(22.0),
           ),
         ),
         backgroundColor: Theme.of(context).primaryColor,
@@ -60,6 +59,7 @@ class MainPageHeader extends StatelessWidget {
               ),
               AppBar(
                 backgroundColor: Colors.transparent,
+                elevation: 0,
                 title: const TextView(
                   'Pokédex',
                   type: TypographyType.appBarRubik,
@@ -78,8 +78,8 @@ class MainPageHeader extends StatelessWidget {
                         color: ComponentColors.text.textWhite1,
                         splashColor: Colors.transparent,
                         icon: controller.themeSwitcherFlag.value
-                            ? const Icon(Icons.light_mode_outlined)
-                            : const Icon(Icons.dark_mode_outlined),
+                            ? const Icon(Icons.light_mode_rounded)
+                            : const Icon(Icons.dark_mode_rounded),
                       )),
                 ],
               )
