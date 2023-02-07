@@ -11,6 +11,7 @@ import '../../../global/strings/strings.dart';
 import '../../../global/themes/app_theme.dart';
 import '../../../global/themes/poke_theme.dart';
 import '../../../global/utils/pokemon_util.dart';
+import 'pokemon_abilities_view.dart';
 import 'pokemon_stats_view.dart';
 import 'pokemon_types_view.dart';
 
@@ -96,6 +97,15 @@ class PokemonDetailView extends StatelessWidget {
               PokemonStatsView(
                 title: 'Base Stats',
                 pokemon: item,
+                margin: EdgeInsets.only(
+                  left: SpacingType.x5.value,
+                  right: SpacingType.x5.value,
+                  top: SpacingType.x3.value,
+                ),
+              ),
+              PokemonAbilitiesView(
+                title: 'Abilities',
+                item: item,
                 margin: EdgeInsets.only(
                   left: SpacingType.x5.value,
                   right: SpacingType.x5.value,

@@ -1,11 +1,11 @@
 {
-    "name": "clovis_two",
-    "short_name": "clovis_two",
+    "name": "Pokedéx",
+    "short_name": "Pokedéx",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Pokedéx",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

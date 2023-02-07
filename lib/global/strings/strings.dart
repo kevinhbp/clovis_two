@@ -6,7 +6,7 @@ class Strings {
       'Copyrights 2023 Kevin Putro. All Rights Reserved.';
 
   static String get appName =>
-      'Pokedex';
+      'Pokedéx';
 
   static String dropFileToUpload(String type) => 'Drop a $type here to upload.';
 
