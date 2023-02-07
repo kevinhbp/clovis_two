@@ -4,7 +4,6 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../../global/data/entity/pokemon.dart';
 import '../../../global/widgets/loading_view.dart';
-import '../../pokemon/controllers/pokemon_detail_controller.dart';
 import '../controllers/pokemon_list_controller.dart';
 import 'main_page_header.dart';
 import 'pokemon_item_view.dart';
@@ -12,8 +11,7 @@ import 'pokemon_item_view.dart';
 class PokemonListView extends StatelessWidget {
   PokemonListView({Key? key}) : super(key: key);
 
-  final PokemonListController listCtrl = Get.find();
-  final PokemonDetailController detailCtrl = Get.find();
+  final PokemonListController controller = Get.find();
 
   @override
   Widget build(BuildContext context) => RefreshIndicator(
@@ -22,7 +20,7 @@ class PokemonListView extends StatelessWidget {
           slivers: [
             MainPageHeader(),
             PagedSliverList<int, Pokemon>(
-              pagingController: listCtrl.pagingController,
+              pagingController: controller.pagingController,
               builderDelegate: PagedChildBuilderDelegate<Pokemon>(
                 firstPageProgressIndicatorBuilder: (context) =>
                     const LoadingView(),

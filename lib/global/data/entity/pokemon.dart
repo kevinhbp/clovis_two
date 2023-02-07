@@ -24,6 +24,18 @@ class Pokemon extends HiveObject {
     this.photoFilePath,
   });
 
+  factory Pokemon.empty() => Pokemon(
+        name: '',
+        id: 0,
+        types: [],
+        height: 0,
+        weight: 0,
+        stats: [],
+        abilities: [],
+        baseExp: 0,
+        species: Result(name: '', url: ''),
+      );
+
   factory Pokemon.fromJson(Map<String, dynamic> json) =>
       _$PokemonFromJson(json);
 

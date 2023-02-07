@@ -7,18 +7,28 @@ import '../../../global/data/entity/pokemon.dart';
 import '../../../global/themes/poke_theme.dart';
 
 class PokemonTypesView extends StatelessWidget {
-  const PokemonTypesView({required this.item, super.key});
+  const PokemonTypesView({
+    required this.item,
+    this.size = 24,
+    this.spaceBetween = 4,
+    super.key,
+  });
 
   final Pokemon item;
+  final double size;
+  final double spaceBetween;
 
   @override
   Widget build(BuildContext context) {
     final children = <Widget>[];
     for (final element in item.types) {
       if (children.isNotEmpty) {
-        children.add(SizedBox(width: SpacingType.x1.value));
+        children.add(SizedBox(width: spaceBetween));
       }
-      children.add(PokemonTypeIcon(item: element));
+      children.add(PokemonTypeIcon(
+        item: element,
+        size: size,
+      ));
     }
     return Container(
       margin: EdgeInsets.only(
@@ -40,13 +50,17 @@ class PokemonTypesView extends StatelessWidget {
 }
 
 class PokemonTypeIcon extends StatelessWidget {
-  const PokemonTypeIcon({required this.item, super.key});
+  const PokemonTypeIcon({
+    required this.item,
+    this.size = 24,
+    super.key,
+  });
 
   final PokeType item;
+  final double size;
 
   @override
   Widget build(BuildContext context) {
-    const size = 24.0;
     final typeName = item.type.name.toLowerCase();
     return Container(
       width: size,

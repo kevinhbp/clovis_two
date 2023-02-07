@@ -1,3 +1,4 @@
+import 'package:adaptive_layout/adaptive_layout.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +10,24 @@ import '../../../global/bin/widgets/text/text_view.dart';
 import '../../../global/data/entity/pokemon.dart';
 import '../../../global/utils/pokemon_util.dart';
 import '../../../global/widgets/loading_view.dart';
+import '../../../main.dart';
+import '../../pokemon/controllers/pokemon_detail_controller.dart';
 import '../../pokemon/widgets/pokemon_types_view.dart';
 
 class PokemonItemView extends StatelessWidget {
-  const PokemonItemView({required this.item, super.key});
+  PokemonItemView({required this.item, super.key});
 
   final Pokemon item;
+  final PokemonDetailController detailCtrl = Get.find();
 
   @override
   Widget build(BuildContext context) => _WrapperView(
-        onTap: () {},
+        openPage: () {
+          Get.toNamed(Routes.pokemonPage, arguments: item);
+        },
+        showPage: () {
+          detailCtrl.pokemon.value = item;
+        },
         child: Stack(
           children: [
             Align(
@@ -38,10 +47,15 @@ class PokemonItemView extends StatelessWidget {
 }
 
 class _WrapperView extends StatelessWidget {
-  _WrapperView({required this.onTap, required this.child});
+  _WrapperView({
+    required this.openPage,
+    required this.showPage,
+    required this.child,
+  });
 
   final Widget child;
-  final Function() onTap;
+  final Function() openPage;
+  final Function() showPage;
 
   @override
   Widget build(BuildContext context) => Card(
@@ -57,10 +71,17 @@ class _WrapperView extends StatelessWidget {
         ),
         child: SizedBox(
           height: 80,
-          child: InkWell(
-            onTap: onTap,
-            borderRadius: RadiusType.moderate.getBorderRadius(),
-            child: child,
+          child: AdaptiveLayout(
+            mediumLayout: InkWell(
+              onTap: showPage,
+              borderRadius: RadiusType.moderate.getBorderRadius(),
+              child: child,
+            ),
+            smallLayout: InkWell(
+              onTap: openPage,
+              borderRadius: RadiusType.moderate.getBorderRadius(),
+              child: child,
+            ),
           ),
         ),
       );

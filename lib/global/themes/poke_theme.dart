@@ -22,6 +22,9 @@ mixin PokemonColors {
   static const steel = Color(0xFF78aab5);
   static const fairy = Color(0xFFf1a6eb);
 
+  static final statColorsLight = [Colors.tealAccent, Colors.teal];
+  static final statColorsDark = [Colors.pinkAccent, Colors.redAccent];
+
   static Map<String, dynamic> _toMap() => {
       'normal': normal,
       'fire': fire,
@@ -53,26 +56,26 @@ mixin PokemonColors {
 }
 
 mixin PokemonBackgroundColors {
-  final normal = const Color(0xffd2d2d2);
-  final fire = const Color(0xFFD5886D);
-  final fighting = const Color(0xFFD9798B);
-  final water = const Color(0xff78beff);
-  final flying = const Color(0xFFC2BBEE);
-  final grass = const Color(0xff95ce9e);
-  final poison = const Color(0xffd695ee);
-  final electric = const Color(0xFFF6D730);
-  final ground = const Color(0xFFF8CBB6);
-  final psychic = const Color(0xfffcd2d2);
-  final rock = const Color(0xffe1dfdd);
-  final ice = const Color(0xffc8f5e8);
-  final bug = const Color(0xFFD8F565);
-  final dragon = const Color(0xFFB094EF);
-  final ghost = const Color(0xffb8bacc);
-  final dark = const Color(0xff9c9ca1);
-  final steel = const Color(0xff9bb1b6);
-  final fairy = const Color(0xfff1cfee);
+  static const  normal = Color(0xffd2d2d2);
+  static const  fire = Color(0xFFD5886D);
+  static const  fighting = Color(0xFFD9798B);
+  static const  water = Color(0xff78beff);
+  static const  flying = Color(0xFFC2BBEE);
+  static const  grass = Color(0xff95ce9e);
+  static const  poison = Color(0xffd695ee);
+  static const  electric = Color(0xFFF6D730);
+  static const  ground = Color(0xFFF8CBB6);
+  static const  psychic = Color(0xfffcd2d2);
+  static const  rock = Color(0xffe1dfdd);
+  static const  ice = Color(0xffc8f5e8);
+  static const  bug = Color(0xFFD8F565);
+  static const  dragon = Color(0xFFB094EF);
+  static const  ghost = Color(0xffb8bacc);
+  static const  dark = Color(0xff9c9ca1);
+  static const  steel = Color(0xff9bb1b6);
+  static const  fairy = Color(0xfff1cfee);
 
-  Map<String, dynamic> _toMap() => {
+  static Map<String, dynamic> _toMap() => {
       'normal': normal,
       'fire': fire,
       'fighting': fighting,
@@ -93,7 +96,7 @@ mixin PokemonBackgroundColors {
       'fairy': fairy,
     };
 
-  dynamic get(String propertyName) {
+  static dynamic get(String propertyName) {
     final mapRep = _toMap();
     if (mapRep.containsKey(propertyName)) {
       return mapRep[propertyName];

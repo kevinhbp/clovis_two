@@ -6,7 +6,7 @@ class Strings {
       'Copyrights 2023 Kevin Putro. All Rights Reserved.';
 
   static String get appName =>
-      'Flutter Introduction UIUXINDO';
+      'Pokedex';
 
   static String dropFileToUpload(String type) => 'Drop a $type here to upload.';
 
@@ -26,12 +26,9 @@ class Strings {
 
   static String get errorGeneralMessage => 'An error occurred.';
 
+  static String get selectAPokemonFirst => 'Select a Pokémon in the left.';
 
+  static String get weight => 'Weight';
 
-  // Sign In
-  static String get email => 'Email';
-
-  static String get password => 'Password';
-
-  static String get lupaPassword => 'Lupa password?';
+  static String get height => 'Height';
 }
